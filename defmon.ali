@@ -1,0 +1,158 @@
+V "GNAT Lib v2021"
+P SS ZX
+
+RN
+RV SIMPLE_BARRIERS
+RV NO_DIRECT_BOOLEAN_OPERATORS
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTION_PROPAGATION
+RV NO_EXCEPTIONS
+RV NO_IO
+RV NO_PROTECTED_TYPES
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV MAX_PROTECTED_ENTRIES=2
+
+U defmon%b		defmon.adb		6e367734 NE OO PK IL
+W ada%s			ada.ads			ada.ali
+Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+Z system%s		system.ads		system.ali
+Z system.concat_3%s	s-conca3.adb		s-conca3.ali
+Z system.concat_4%s	s-conca4.adb		s-conca4.ali
+Z system.img_int%s	s-imgint.ads		s-imgint.ali
+Z system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+Z system.soft_links%s	s-soflin.adb		s-soflin.ali
+Z system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
+Z system.tasking.protected_objects.entries%s  s-tpoben.adb  s-tpoben.ali
+Z system.tasking.protected_objects.operations%s  s-tpobop.adb  s-tpobop.ali
+
+U defmon%s		defmon.ads		00952de1 EE NE OO PK IL
+W ada%s			ada.ads			ada.ali
+Z ada.exceptions%s	a-except.adb		a-except.ali
+Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+Z system%s		system.ads		system.ali
+Z system.tasking%s	s-taskin.adb		s-taskin.ali
+Z system.tasking.protected_objects%s  s-taprob.adb  s-taprob.ali
+Z system.tasking.protected_objects.entries%s  s-tpoben.adb  s-tpoben.ali
+
+D ada.ads		20210520051132 76789da1 ada%s
+D a-except.ads		20210520051128 946f3014 ada.exceptions%s
+D a-finali.ads		20210520051128 bf4f806b ada.finalization%s
+D a-ioexce.ads		20210520051128 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20210520051130 119b8fb3 ada.streams%s
+D a-string.ads		20210520051130 90ac6797 ada.strings%s
+D a-sttebu.ads		20210520051130 18209c64 ada.strings.text_buffers%s
+D a-stuten.ads		20210520051130 808c40ad ada.strings.utf_encoding%s
+D a-tags.ads		20210520051130 9eaa38c6 ada.tags%s
+D a-textio.ads		20210520051130 aef4d56d ada.text_io%s
+D a-unccon.ads		20210520051130 0e9b276f ada.unchecked_conversion%s
+D defmon.ads		20231201003626 ae61f88c defmon%s
+D defmon.adb		20231201004514 6ea35ad5 defmon%b
+D interfac.ads		20210520051132 edec285f interfaces%s
+D i-c.ads		20210520051132 d9beded9 interfaces.c%s
+D i-cstrin.ads		20210520051132 341d0ddf interfaces.c.strings%s
+D i-cstrea.ads		20210520051132 e53d8b8e interfaces.c_streams%s
+D system.ads		20210520051136 2ffa5114 system%s
+D s-atacco.ads		20210520051132 4c36d12f system.address_to_access_conversions%s
+D s-conca3.ads		20210520051132 0b705ca5 system.concat_3%s
+D s-conca4.ads		20210520051132 7e642b20 system.concat_4%s
+D s-crtl.ads		20210520051132 0ebbdb71 system.crtl%s
+D s-exctab.ads		20210520051132 54135002 system.exception_table%s
+D s-ficobl.ads		20210520051132 078245e4 system.file_control_block%s
+D s-finroo.ads		20210520051132 4ff27390 system.finalization_root%s
+D s-imagei.ads		20210520051134 0d3f86a7 system.image_i%s
+D s-imgint.ads		20210520051134 bdb6f5ec system.img_int%s
+D s-multip.ads		20210520051134 38ac9f73 system.multiprocessors%s
+D s-osinte.ads		20210520051128 97504df8 system.os_interface%s
+D s-parame.ads		20210520051134 4752c4cb system.parameters%s
+D s-putima.ads		20210520051134 4e095881 system.put_images%s
+D s-secsta.ads		20210520051134 9b3ab94b system.secondary_stack%s
+D s-soflin.ads		20210520051134 a7318a92 system.soft_links%s
+D s-stache.ads		20210520051134 a37c21ec system.stack_checking%s
+D s-stausa.ads		20210520051134 017a0a05 system.stack_usage%s
+D s-stalib.ads		20210520051134 472fbca8 system.standard_library%s
+D s-stoele.ads		20210520051134 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20210520051134 ed88f8fb system.storage_elements%b
+D s-tasinf.ads		20210520051128 601f6b72 system.task_info%s
+D s-taspri.ads		20210520051128 a1350802 system.task_primitives%s
+D s-taskin.ads		20210520051128 88fba9ad system.tasking%s
+D s-taprob.ads		20210520051128 acd6094d system.tasking.protected_objects%s
+D s-tpoben.ads		20210520051128 60ad3dae system.tasking.protected_objects.entries%s
+D s-tpobop.ads		20210520051128 5f548bb3 system.tasking.protected_objects.operations%s
+D s-traent.ads		20210520051134 26a8d361 system.traceback_entries%s
+D s-unstyp.ads		20210520051134 2b077493 system.unsigned_types%s
+D s-wchcon.ads		20210520051136 1b7d22d2 system.wch_con%s
+D s-win32.ads		20210520051136 15ac53fb system.win32%s
+D unchconv.ads		20210520051136 ca2f9e18 unchecked_conversion%s
+G a e
+G c Z s b [inversa defmon__monitorrr 11 18 none]
+G c Z s b [getnumcotxes defmon__monitorrr 12 18 none]
+G c Z s b [actualitzarnumcotxes defmon__monitorrr 13 19 none]
+G c Z s b [arribarpontcotxe defmon__monitorrr 14 19 none]
+G c Z s b [arribarpontambulancia defmon__monitorrr 15 19 none]
+G c Z s b [entrarpontcotxe defmon__monitorrr 16 15 none]
+G c Z s b [entrarpontambulancia defmon__monitorrr 17 15 none]
+G c Z s b [sortirpont defmon__monitorrr 18 19 none]
+G c Z s b [monitorrr__inversaN defmon 11 9 none]
+G c Z s b [monitorrr__inversaP defmon 11 9 none]
+G c Z s b [monitorrr__getnumcotxesN defmon 12 9 none]
+G c Z s b [monitorrr__getnumcotxesP defmon 12 9 none]
+G c Z s b [monitorrr__actualitzarnumcotxesN defmon 13 9 none]
+G c Z s b [monitorrr__actualitzarnumcotxesP defmon 13 9 none]
+G c Z s b [monitorrr__arribarpontcotxeN defmon 14 9 none]
+G c Z s b [monitorrr__arribarpontcotxeP defmon 14 9 none]
+G c Z s b [monitorrr__arribarpontambulanciaN defmon 15 9 none]
+G c Z s b [monitorrr__arribarpontambulanciaP defmon 15 9 none]
+G c Z s b [monitorrr__sortirpontN defmon 18 9 none]
+G c Z s b [monitorrr__sortirpontP defmon 18 9 none]
+G c Z s s [monitorrrVDI defmon 9 5 none]
+G c Z s s [monitorrrVDF defmon 9 5 none]
+G c Z s s [monitorrrVIP defmon 9 5 none]
+G c Z s s [P3sIP defmon 16 9 none]
+G c Z s s [P6sIP defmon 17 9 none]
+X 1 ada.ads
+16K9*Ada 20e8 12|3r6 3r23 13|2r6 2r23
+X 10 a-textio.ads
+58K13*Text_IO 725e16 12|3w10 3r27 13|2w10 2r27
+463U14*Put 13|52s13
+506U14*Put_Line 13|57s13 64s13 68s13 73s13 83s13 93s13
+X 12 defmon.ads
+5K9*defmon 32l5 32e11 13|4b14 104l5 104t11
+9W20*monitorrr 24E9 30l9 30e18 13|6b20 102l9 102t18
+11V18 inversa{string} 11>26 13|9b18 16l13 16t20 54s54
+11a26 dir{string} 13|9b26 11r16
+12V18 getNumCotxes{integer} 12>31 13|19b18 26l14 26t26 54s16 54s41 57s72
+. 68s72
+12a31 dir{string} 13|19b31 21r16
+13U19 actualitzarNumCotxes 13>40 13>54 13|30b19 46l13 46t33 53s13 67s13
+13a40 dir{string} 13|30b40 32r16 39r16
+13b54 aumentar{boolean} 13|30b54 33r20 40r20
+14U19 arribarPontCotxe 14>36 14>49 13|48b19 58l13 58t29
+14i36 id{integer} 13|48b36 52r45
+14a49 direccio{string} 13|48b49 52r76 53r34 54r29 54r62 57r40 57r85
+15U19 arribarPontAmbulancia 15>41 13|71b19 75l13 75t34
+15i41 id{integer} 13|71b41 73r57
+16Y15 entrarPontCotxe 16>31 16>45 13|61b15 69l13 69t28
+16i31 id{integer} 13|64r50
+16a45 direccio{string} 13|67r34 68r40 68r85
+17Y15 entrarPontAmbulancia 17>36 13|80b15 84l13 84t33
+17i36 id{integer} 13|83r57
+18U19 sortirPont 18>30 18>44 13|91b19 100l13 100t23
+18i30 id{integer} 13|91b30 93r57
+18b44 tipusV{boolean} 13|91b44 94r16
+24i9 cotxesSud{integer} 13|22r24 34r21 34r34 36r21 36r34
+25i9 cotxesNord{integer} 13|24r24 41r21 41r35 43r21 43r35
+26b9 cotxePont{boolean} 13|61r93 63r13 80r59 82r13 99r13
+27b9 ambulancia{boolean} 13|61r74 74r13 96r17
+28b9 hi_ha_mes_cotxes{boolean} 13|55r17 61r107
+X 13 defmon.adb
+61i31 id{integer}
+61a45 direccio{string}
+80i36 id{integer}
+X 35 s-stausa.ads
+208U14*Initialize 209i<c,__gnat_stack_usage_initialize>22
+273U14*Output_Results 277i<c,__gnat_stack_usage_output_results>22
+

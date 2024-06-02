@@ -1,0 +1,165 @@
+ESTAS EJECUCIONES MUESTRAN EL COMPORTAMIENTO DEL PROGRAMA EN SITUACIONES QUE SE DEBÍAN CONTEMPLAR COMO EL BLOQUEO DE CUALQUIER TURISMO SI HABÍA OTRO 
+EN EL PUENTE, LA PREFERENCIA DE LA AMBULANCIA SOBRE EL COCHE, Y LA PREFERENCIA DE AQUELLOS COCHES QUÉ SON MÁS QUE EN LA DIRECCIÓN CONTRARIA. 
+*Cambiando los sleeps se han conseguido las diferentes simulaciones consiguen reflejar los comportamientos comentados anteriormente*.
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<EJECUCIÓN NÚMERO 1>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(En este ejemplo la ambulancia llega al mismo instante que los primeros coches y como tiene preferencia entra, sale y luego los coches realizan lo mismo.)
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+PS C:\Users\carlo\OneDrive\Escritorio\UIB_22_23\primer_semestre\concurrent\zzz> gnatmake defmon.adb
+gcc -c defmon.adb
+PS C:\Users\carlo\OneDrive\Escritorio\UIB_22_23\primer_semestre\concurrent\zzz> gnatmake pont.adb  
+gnatbind -x pont.ali
+gnatlink pont.ali
+PS C:\Users\carlo\OneDrive\Escritorio\UIB_22_23\primer_semestre\concurrent\zzz> ./pont
+El cotxe  2 esta en ruta en direccio Nord
+El cotxe  5 esta en ruta en direccio Sud 
+L'ambulancia  112 esta en ruta
+El cotxe  4 esta en ruta en direccio Nord
+El cotxe  1 esta en ruta en direccio Sud
+El cotxe  3 esta en ruta en direccio Sud
++++++Ambulancia  112 espera per entrar
++++++Ambulancia  112 es al pont
+---->El vehicle  112 surt del pont
+El cotxe  2 espera a l'entrada Nord. Esperen al Nord:  1
+El cotxe  2 entra al pont.
+. Esperen al Nord:  0
+---->El vehicle  2 surt del pont
+El cotxe  5 espera a l'entrada Sud . Esperen al Sud :  1
+El cotxe  5 entra al pont.
+. Esperen al Sud :  0
+---->El vehicle  5 surt del pont
+El cotxe  4 espera a l'entrada Nord. Esperen al Nord:  1
+El cotxe  4 entra al pont.
+. Esperen al Nord:  0
+---->El vehicle  4 surt del pont
+El cotxe  1 espera a l'entrada Sud . Esperen al Sud :  1
+El cotxe  1 entra al pont.
+. Esperen al Sud :  0
+---->El vehicle  1 surt del pont
+El cotxe  3 espera a l'entrada Sud . Esperen al Sud :  1
+El cotxe  3 entra al pont.
+. Esperen al Sud :  0
+---->El vehicle  3 surt del pont
+PS C:\Users\carlo\OneDrive\Escritorio\UIB_22_23\primer_semestre\concurrent\zzz> 
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<EJECUCIÓN NÚMERO 2>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(Aquí la ambulancia llega más tarde que algunos coches, obtiene la preferencia, entra y sale, y luego hacen lo mismo los coches restantes)
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+PS C:\Users\carlo\OneDrive\Escritorio\UIB_22_23\primer_semestre\concurrent\zzz> gnatmake defmon.adb
+gcc -c defmon.adb
+PS C:\Users\carlo\OneDrive\Escritorio\UIB_22_23\primer_semestre\concurrent\zzz> gnatmake pont.adb  
+gnatbind -x pont.ali
+gnatlink pont.ali
+PS C:\Users\carlo\OneDrive\Escritorio\UIB_22_23\primer_semestre\concurrent\zzz> ./pont
+El cotxe 3 esta en ruta en direccio Sud 
+El cotxe 5 esta en ruta en direccio Sud 
+El cotxe 3 espera a l'entrada Sud . Esperen al Sud : 1
+El cotxe 3 entra al pont. 
+ Esperen al Sud : 0
+El cotxe 4 esta en ruta en direccio Nord
+El cotxe 2 esta en ruta en direccio Nord
+L'ambulancia 112 esta en ruta
+El cotxe 1 esta en ruta en direccio Sud 
+---->El vehicle 3 surt del pont
++++++Ambulancia 112 espera per entrar
++++++Ambulància 112 és al pont
+---->El vehicle 112 surt del pont
+El cotxe 1 espera a l'entrada Sud . Esperen al Sud : 1
+El cotxe 1 entra al pont. 
+ Esperen al Sud : 0
+---->El vehicle 1 surt del pont
+El cotxe 2 espera a l'entrada Nord. Esperen al Nord: 1
+El cotxe 2 entra al pont. 
+ Esperen al Nord: 0
+---->El vehicle 2 surt del pont
+El cotxe 4 espera a l'entrada Nord. Esperen al Nord: 1
+El cotxe 4 entra al pont. 
+ Esperen al Nord: 0
+---->El vehicle 4 surt del pont
+El cotxe 5 espera a l'entrada Sud . Esperen al Sud : 1
+El cotxe 5 entra al pont. 
+ Esperen al Sud : 0
+---->El vehicle 5 surt del pont
+PS C:\Users\carlo\OneDrive\Escritorio\UIB_22_23\primer_semestre\concurrent\zzz> 
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<EJECUCIÓN NÚMERO 3>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(Aquí la ambulancia llega la última, como hay más coches en el SUD que en el NORTE el coche número 4 se queda bloqueado hasta que esto no es así) 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+PS C:\Users\carlo\OneDrive\Escritorio\UIB_22_23\primer_semestre\concurrent\zzz> gnatmake defmon.adb
+gcc -c defmon.adb
+PS C:\Users\carlo\OneDrive\Escritorio\UIB_22_23\primer_semestre\concurrent\zzz> gnatmake pont.adb  
+gnatbind -x pont.ali
+gnatlink pont.ali
+PS C:\Users\carlo\OneDrive\Escritorio\UIB_22_23\primer_semestre\concurrent\zzz> ./pont
+El cotxe 3 esta en ruta en direccio SUD
+El cotxe 5 està en ruta en direccio SUD
+El cotxe 1 està en ruta en direcció SUD
+El cotxe 2 està en ruta en direcció NORD
+El cotxe 4 està en ruta en direcció NORD
+El cotxe 2 espera a l'entrada NORD Esperen al NORD: 1
+El cotxe 2 entra al pont. 
+ Esperen al NORD: 0
+El cotxe 4 espera a l'entrada NORD Esperen al NORD: 1
+El cotxe 3 espera a l'entrada SUD Esperen al SUD: 1
+El cotxe 5 espera a l'entrada SUD Esperen al SUD: 2
+El cotxe 1 espera a l'entrada SUD Esperen al SUD: 3
+L'ambulancia 112 està en ruta
+---->El vehicle 2 surt del pont
+El cotxe 1 entra al pont. 
+ Esperen al SUD: 2
+---->El vehicle 1 surt del pont
+El cotxe 5 entra al pont. 
+ Esperen al SUD: 1
+---->El vehicle 5 surt del pont
+El cotxe 3 entra al pont. 
+ Esperen al SUD: 0
+---->El vehicle 3 surt del pont
+El cotxe 4 entra al pont. 
+ Esperen al NORD: 0
+---->El vehicle 4 surt del pont
++++++Ambulància 112 espera per entrar
++++++Ambulància 112 és al pont
+---->El vehicle 112 surt del pont
+PS C:\Users\carlo\OneDrive\Escritorio\UIB_22_23\primer_semestre\concurrent\zzz> 
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<EJECUCIÓN NÚMERO 5>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(Aquí vemos como el coche 2 se queda bloqueado por la ambulancia que justo se ha puesto en ruta también, ya después entra y sale) 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+PS C:\Users\carlo\OneDrive\Escritorio\UIB_22_23\primer_semestre\concurrent\zzz> gnatmake defmon.adb
+gcc -c defmon.adb
+PS C:\Users\carlo\OneDrive\Escritorio\UIB_22_23\primer_semestre\concurrent\zzz> gnatmake pont.adb  
+gnatbind -x pont.ali
+gnatlink pont.ali
+PS C:\Users\carlo\OneDrive\Escritorio\UIB_22_23\primer_semestre\concurrent\zzz> ./pont
+El cotxe 3 esta en ruta en direccio Sud 
+El cotxe 3 espera a l'entrada Sud . Esperen al Sud : 1
+El cotxe 3 entra al pont. 
+ Esperen al Sud : 0
+El cotxe 1 esta en ruta en direccio Sud 
+---->El vehicle 3 surt del pont
+El cotxe 1 espera a l'entrada Sud . Esperen al Sud : 1
+El cotxe 1 entra al pont. 
+ Esperen al Sud : 0
+---->El vehicle 1 surt del pont
+El cotxe 2 esta en ruta en direccio Nord
+L'ambulancia 112 esta en ruta
++++++Ambulancia 112 espera per entrar
++++++Ambulància 112 és al pont
+---->El vehicle 112 surt del pont
+El cotxe 2 espera a l'entrada Nord. Esperen al Nord: 1
+El cotxe 2 entra al pont. 
+ Esperen al Nord: 0
+El cotxe 4 esta en ruta en direccio Nord
+---->El vehicle 2 surt del pont
+El cotxe 4 espera a l'entrada Nord. Esperen al Nord: 1
+El cotxe 4 entra al pont. 
+ Esperen al Nord: 0
+---->El vehicle 4 surt del pont
+El cotxe 5 esta en ruta en direccio Sud 
+El cotxe 5 espera a l'entrada Sud . Esperen al Sud : 1
+El cotxe 5 entra al pont. 
+ Esperen al Sud : 0
+---->El vehicle 5 surt del pont
+PS C:\Users\carlo\OneDrive\Escritorio\UIB_22_23\primer_semestre\concurrent\zzz> 
+
+
